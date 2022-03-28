@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+	{% block title %} Поиск {% endblock %}
+	{% block meta %}
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+		  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+		<style type="text/css">
+			input{width: 100%}
+			input.radio{width: 10%}
+			input.submit{width: 20%}
+			select{width: 100%}
+			ul{list-style-type: none}
+		</style>
+	{% endblock %}
+	{% block content %}
+    	<h3>Самые частые ключевые слова</h3>
+        {{image | safe}}
+        <h3>Ссылки на похожие группы, если такие есть в базе</h3>
+        <ul>
+            {%for i in similar_groups%}
+            <li><a class="nav-link" href="https://vk.com/{{i}}"></a><li>
+            {%endfor%}
+        </ul>
+	{% endblock %}
