@@ -1,0 +1,28 @@
+
+<!-- saved from url=(0103)https://www.pythonanywhere.com/user/robibis/files/home/robibis/groups_keywords/templates/search_kw.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head><body>{% extends 'base.html' %}
+	{% block title %} Поиск по ключевому слову {% endblock %}
+	{% block meta %}
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		  <link rel="stylesheet" href="./search_kw_files/bootstrap.min.css">
+		  <script src="./search_kw_files/jquery.min.js"></script>
+		  <script src="./search_kw_files/bootstrap.min.js"></script>
+		<style type="text/css">
+			input{width: 100%}
+			input.radio{width: 10%}
+			input.submit{width: 20%}
+			select{width: 100%}
+			ul{list-style-type: none}
+		</style>
+	{% endblock %}
+	{% block content %}
+		<h3>Введите слово, чтобы проверить, в каких сообществах из базы оно ключевое</h3>
+		<form class="container" action="https://www.pythonanywhere.com/process_kw">
+			<div class="row">
+				<input type="text" name="group_link" placeholder="человек">
+			</div>
+			<div class="row">
+				<input class="submit" type="submit" name="submit" value="Отправить">
+			</div>
+		</form>
+	{% endblock %}</body></html>
